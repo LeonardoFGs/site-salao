@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Studio Thaynara Santos – Salão de Beleza em Maringá</title>
+<meta name="description" content="Conheça a equipe do Studio Thaynara Santos, veja as habilidades de cada profissional e agende direto pelo WhatsApp.">
+<meta name="theme-color" content="#241230">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Studio Thaynara Santos – Salão de Beleza em Maringá">
+<meta property="og:description" content="Conheça a equipe e agende direto pelo WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%87%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF7F9; --surface:#FFFFFF; --ink:#2A1630; --muted:#66526D;
+    --accent:#B8316B; --accent-ink:#FFFFFF; --lilac:#F0E6F3; --line:#E7DAEA;
+    --wa:#117A42; --wa-ink:#FFFFFF;
+    --hero:#241230; --hero-ink:#F7EEF8; --hero-muted:#CDB8D3; --hero-line:#47315A; --hero-accent:#F0A9C9;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#170D1C; --surface:#241530; --ink:#F6ECF7; --muted:#BBA6C1;
+      --accent:#E56AA0; --accent-ink:#2A0F1D; --lilac:#2B1A35; --line:#3E2B4B;
+      --wa:#3CCB7F; --wa-ink:#0F2A1B;
+      --hero:#2B1638;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#170D1C; --surface:#241530; --ink:#F6ECF7; --muted:#BBA6C1;
+    --accent:#E56AA0; --accent-ink:#2A0F1D; --lilac:#2B1A35; --line:#3E2B4B;
+    --wa:#3CCB7F; --wa-ink:#0F2A1B;
+    --hero:#2B1638;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{background:var(--hero); scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px); scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:17px; line-height:1.6;
+  }
+  h1,h2,h3{font-family:"DM Serif Display",Georgia,"Times New Roman",serif; font-weight:400; line-height:1.1; margin:0}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--accent); outline-offset:3px; border-radius:6px}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 20px}
+  .skip{position:absolute; left:-999px; top:8px; background:var(--accent); color:var(--accent-ink); padding:8px 14px; border-radius:8px; z-index:50}
+  .skip:focus{left:12px}
+
+  /* Botões */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    padding:13px 24px; border-radius:999px; border:0; cursor:pointer;
+    font:600 1rem "Figtree",system-ui,sans-serif; text-decoration:none;
+    background:var(--accent); color:var(--accent-ink); transition:filter .15s;
+  }
+  .btn:hover{filter:brightness(1.08)}
+  .btn.wa{background:var(--wa); color:var(--wa-ink)}
+  .btn.line{background:transparent; color:inherit; box-shadow:inset 0 0 0 2px currentColor}
+  .btn.small{padding:9px 18px; font-size:.95rem}
+  .btn[aria-disabled="true"]{opacity:.55; cursor:not-allowed; filter:none}
+  .btn svg{width:20px; height:20px; fill:currentColor; flex:none}
+
+  /* Barra do topo */
+  .top{position:sticky; top:env(safe-area-inset-top,0px); z-index:20; background:var(--hero); color:var(--hero-ink); border-bottom:1px solid var(--hero-line)}
+  .bar{display:flex; align-items:center; justify-content:space-between; gap:16px; height:64px}
+  .brand{font-family:"DM Serif Display",Georgia,serif; font-size:1.5rem; text-decoration:none}
+  .nav{display:flex; gap:28px}
+  .nav a{text-decoration:none; color:var(--hero-muted); font-weight:500}
+  .nav a:hover{color:var(--hero-ink)}
+  @media (max-width:680px){ .nav{display:none} }
+
+  /* Início */
+  .hero{background:var(--hero); color:var(--hero-ink); padding:72px 0 80px}
+  .hero-grid{display:grid; gap:48px; grid-template-columns:1.25fr 1fr; align-items:center}
+  @media (max-width:820px){ .hero-grid{grid-template-columns:1fr; gap:36px} .hero{padding:48px 0 56px} }
+  .hero h1{font-size:clamp(2.8rem,8vw,5rem); letter-spacing:-0.01em}
+  .hero .lead{color:var(--hero-muted); font-size:1.15rem; max-width:44ch; margin:22px 0 32px}
+  .hero .acoes{display:flex; flex-wrap:wrap; gap:12px}
+  .painel{border:1px solid var(--hero-line); border-radius:20px; padding:28px; background:rgba(255,255,255,.04)}
+  .painel h2{font-size:1.5rem; margin-bottom:16px}
+  .servicos{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 22px; padding:0; list-style:none}
+  .servicos li{border:1px solid var(--hero-line); border-radius:999px; padding:6px 14px; font-size:.95rem}
+  .painel dl{margin:0; display:grid; gap:12px}
+  .painel dt{color:var(--hero-muted); font-size:.9rem}
+  .painel dd{margin:0}
+
+  /* Blocos de conteúdo */
+  .block{padding:72px 0}
+  .block h2{font-size:clamp(2rem,5vw,2.9rem)}
+  .block .sub{color:var(--muted); margin:12px 0 36px; max-width:54ch}
+
+  /* Como agendar */
+  .passos{display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin:0; padding:0; list-style:none; counter-reset:passo}
+  .passos li{counter-increment:passo; padding-top:0}
+  .passos li::before{
+    content:counter(passo); display:grid; place-items:center;
+    width:40px; height:40px; border-radius:50%; margin-bottom:14px;
+    background:var(--accent); color:var(--accent-ink); font:400 1.3rem "DM Serif Display",serif;
+  }
+  .passos strong{display:block; font-size:1.1rem; margin-bottom:4px}
+  .passos span{color:var(--muted)}
+
+  /* Equipe */
+  .grid{display:grid; gap:24px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:20px;
+    padding:28px; display:flex; flex-direction:column; gap:16px;
+  }
+  .person{display:flex; align-items:center; gap:16px}
+  .avatar{
+    width:84px; height:84px; border-radius:50%; flex:none; overflow:hidden;
+    background:var(--lilac); color:var(--accent);
+    display:grid; place-items:center; font:400 2.2rem "DM Serif Display",serif;
+  }
+  .avatar img{width:100%; height:100%; object-fit:cover; display:block}
+  .person h3{font-size:1.5rem}
+  .person span{color:var(--muted); font-size:.96rem}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin:0; padding:0; list-style:none}
+  .chips li{background:var(--lilac); border-radius:999px; padding:5px 13px; font-size:.9rem}
+  .card .btn{margin-top:auto; width:100%}
+
+  /* Cursos */
+  .cursos{background:var(--lilac)}
+  .cursos .card{border-radius:14px}
+  .cursos h3{font-size:1.5rem}
+  .cursos p{margin:0; color:var(--muted)}
+  .preco{font:400 1.7rem "DM Serif Display",serif; color:var(--accent)}
+
+  /* Contato */
+  .contato-grid{display:grid; gap:40px; grid-template-columns:1fr 1fr}
+  @media (max-width:760px){ .contato-grid{grid-template-columns:1fr} }
+  .contato-grid p{margin:0 0 14px; color:var(--muted); max-width:50ch}
+  .dados{margin:0 0 24px; display:grid; gap:14px}
+  .dados dt{color:var(--muted); font-size:.9rem}
+  .dados dd{margin:0; font-weight:500}
+  .links{display:flex; flex-wrap:wrap; gap:12px}
+  .links .btn.line{color:var(--ink)}
+
+  footer{background:var(--hero); color:var(--hero-muted); padding:36px 0 96px; font-size:.95rem}
+  footer strong{color:var(--hero-ink)}
+
+  /* WhatsApp flutuante */
+  .flutuante{
+    position:fixed; right:16px; bottom:calc(16px + env(safe-area-inset-bottom,0px));
+    z-index:30; box-shadow:0 6px 20px rgba(0,0,0,.28);
+  }
+  [hidden]{display:none !important}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#equipe">Ir para a equipe</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#inicio" id="marca"></a>
+    <nav class="nav" aria-label="Seções do site">
+      <a href="#como">Como agendar</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#cursos" id="nav-cursos" hidden>Cursos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn wa small" id="btn-topo" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1 id="nome-salao"></h1>
+        <p class="lead" id="slogan"></p>
+        <div class="acoes">
+          <a class="btn" href="#equipe">Conhecer a equipe</a>
+          <a class="btn line" id="btn-geral" href="#" target="_blank" rel="noopener">Falar com o salão</a>
+        </div>
+      </div>
+      <aside class="painel" aria-labelledby="t-servicos">
+        <h2 id="t-servicos">Serviços</h2>
+        <ul class="servicos" id="servicos"></ul>
+        <dl id="resumo"></dl>
+      </aside>
+    </div>
+  </div>
+
+  <div class="block" id="como">
+    <div class="wrap">
+      <h2>Como agendar</h2>
+      <p class="sub">É rápido e sem cadastro.</p>
+      <ol class="passos">
+        <li><strong>Escolha a profissional</strong><span>Veja a função e as habilidades de cada uma na equipe.</span></li>
+        <li><strong>Chame no WhatsApp</strong><span>O botão abre a conversa com uma mensagem pronta.</span></li>
+        <li><strong>Combine o horário</strong><span>Confirme serviço, dia e horário direto com ela.</span></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="block" id="equipe" style="background:var(--surface)">
+    <div class="wrap">
+      <h2>Nossa equipe</h2>
+      <p class="sub">Cada profissional atende pelo próprio WhatsApp. Escolha quem combina com o que você procura.</p>
+      <div class="grid" id="lista-equipe"></div>
+    </div>
+  </div>
+
+  <div class="block cursos" id="cursos" hidden>
+    <div class="wrap">
+      <h2>Cursos</h2>
+      <p class="sub">Aprenda com quem trabalha na prática. A compra é feita pela Hotmart, com pagamento seguro.</p>
+      <div class="grid" id="lista-cursos"></div>
+    </div>
+  </div>
+
+  <div class="block" id="contato">
+    <div class="wrap contato-grid">
+      <div>
+        <h2>Sobre o salão</h2>
+        <p style="margin-top:16px" id="sobre"></p>
+      </div>
+      <div>
+        <h2>Visite o salão</h2>
+        <dl class="dados" id="dados" style="margin-top:16px"></dl>
+        <div class="links" id="links"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap" id="rodape"></div>
+</footer>
+
+<a class="btn wa flutuante" id="btn-flutuante" href="#" target="_blank" rel="noopener" aria-label="Falar com o salão no WhatsApp"></a>
+
+<script>
+/* =====================================================================
+   ÁREA PARA EDITAR — você só precisa mexer aqui (as 3 caixas abaixo).
+   Mantenha as aspas "" e as vírgulas , como estão.
+   ===================================================================== */
+
+/* 1) DADOS DO SALÃO */
+const SALAO = {
+  nome: "Studio Thaynara Santos",
+  slogan: "Cabelo, unhas e sobrancelhas em Maringá. Escolha a profissional e agende pelo WhatsApp.",
+  sobre: "Somos um salão com atendimento personalizado, feito por profissionais que cuidam de cada detalhe. Aqui você escolhe com quem quer ser atendida e combina tudo direto com ela.",
+  // WhatsApp geral do salão: só números, com 55 + DDD + número
+  whatsapp: "5514998954000",
+  mensagemGeral: "Olá! Vim pelo site do salão e gostaria de agendar um horário.",
+  endereco: "Rua Exemplo, 123 – Centro, Maringá/PR",
+  horario: "Ter a sáb, das 9h às 19h",
+  instagram: "https://instagram.com/seu_salao"   // deixe "" para esconder
+};
+
+/* 2) EQUIPE — copie um bloco { ... } para cada menina do salão.
+      foto: coloque o arquivo na pasta "fotos" (ex: "fotos/ana.jpg").
+      Se não tiver foto, aparece a inicial do nome automaticamente.
+      A "funcao" de cada uma também vira um serviço na lista do topo. */
+const EQUIPE = [
+  {
+    nome: "Ana Souza",
+    funcao: "Cabeleireira",
+    habilidades: ["Corte feminino", "Coloração", "Mechas", "Escova"],
+    whatsapp: "5544999990001",
+    foto: "fotos/ana.jpg"
+  },
+  {
+    nome: "Bruna Lima",
+    funcao: "Manicure e pedicure",
+    habilidades: ["Esmaltação em gel", "Alongamento", "Nail art"],
+    whatsapp: "5544999990002",
+    foto: "fotos/bruna.jpg"
+  },
+  {
+    nome: "Camila Rocha",
+    funcao: "Designer de sobrancelhas",
+    habilidades: ["Design", "Henna", "Micropigmentação", "Limpeza de pele"],
+    whatsapp: "5544999990003",
+    foto: "fotos/camila.jpg"
+  }
+];
+
+/* 3) CURSOS — para o futuro. Deixe MOSTRAR_CURSOS = false até estar pronto.
+      link: cole aqui o link do produto na Hotmart.
+      Se o link ficar vazio "", o botão aparece como "Em breve". */
+const MOSTRAR_CURSOS = true;
+const CURSOS = [
+  {
+    titulo: "Curso de Design de Sobrancelhas",
+    descricao: "Do básico ao atendimento completo, com aulas em vídeo.",
+    preco: "R$ 197",
+    link: ""   // exemplo: "https://pay.hotmart.com/XXXXXXXX"
+  },
+  {
+    titulo: "Curso de Unhas em Gel",
+    descricao: "Técnicas passo a passo para começar a atender.",
+    preco: "R$ 247",
+    link: ""
+  }
+];
+
+/* =====================================================================
+   DAQUI PARA BAIXO É O "MOTOR" DA PÁGINA — não precisa mexer.
+   ===================================================================== */
+
+const ICONE_WA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.95L2 22l5.2-1.36A9.9 9.9 0 1 0 12.04 2Zm5.8 14.1c-.25.7-1.45 1.34-2 1.4-.52.06-1.17.08-1.9-.12a17 17 0 0 1-1.72-.64c-3.03-1.3-5-4.35-5.15-4.55-.15-.2-1.23-1.63-1.23-3.1 0-1.48.77-2.2 1.05-2.5.27-.3.6-.37.8-.37h.57c.18 0 .43-.07.67.52.25.6.85 2.07.92 2.22.08.15.13.32.03.52-.1.2-.15.32-.3.5-.15.17-.32.38-.45.51-.15.15-.3.3-.13.6.18.3.77 1.27 1.65 2.06 1.13 1 2.08 1.32 2.38 1.47.3.15.47.12.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.08.12.08.72-.17 1.42Z"/></svg>';
+
+function esc(t){
+  return String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function linkWhatsApp(numero, mensagem){
+  return "https://wa.me/" + String(numero).replace(/\D/g, "") + "?text=" + encodeURIComponent(mensagem);
+}
+const $ = id => document.getElementById(id);
+
+// Topo e início
+document.title = SALAO.nome + " – Salão de Beleza";
+$("marca").textContent = SALAO.nome;
+$("nome-salao").textContent = SALAO.nome;
+$("slogan").textContent = SALAO.slogan;
+const urlGeral = linkWhatsApp(SALAO.whatsapp, SALAO.mensagemGeral);
+$("btn-topo").href = urlGeral;
+$("btn-geral").href = urlGeral;
+$("btn-flutuante").href = urlGeral;
+$("btn-flutuante").innerHTML = ICONE_WA + " WhatsApp";
+
+// Serviços (vêm da função de cada profissional)
+const servicos = [...new Set(EQUIPE.map(p => p.funcao))];
+$("servicos").innerHTML = servicos.map(s => `<li>${esc(s)}</li>`).join("");
+
+const resumo = [];
+if (SALAO.horario)  resumo.push(`<div><dt>Horário</dt><dd>${esc(SALAO.horario)}</dd></div>`);
+if (SALAO.endereco) resumo.push(`<div><dt>Endereço</dt><dd>${esc(SALAO.endereco)}</dd></div>`);
+$("resumo").innerHTML = resumo.join("");
+
+// Equipe
+$("lista-equipe").innerHTML = EQUIPE.map((p, i) => {
+  const primeiroNome = p.nome.split(" ")[0];
+  const msg = "Olá, " + primeiroNome + "! Vi seu perfil no site do " + SALAO.nome + " e gostaria de agendar um horário.";
+  return `
+    <article class="card">
+      <div class="person">
+        <div class="avatar" data-i="${i}">${p.foto ? `<img src="${esc(p.foto)}" alt="Foto de ${esc(p.nome)}">` : esc(p.nome.charAt(0))}</div>
+        <div><h3>${esc(p.nome)}</h3><span>${esc(p.funcao)}</span></div>
+      </div>
+      <ul class="chips">${p.habilidades.map(h => `<li>${esc(h)}</li>`).join("")}</ul>
+      <a class="btn wa" href="${linkWhatsApp(p.whatsapp, msg)}" target="_blank" rel="noopener">${ICONE_WA} Chamar ${esc(primeiroNome)} no WhatsApp</a>
+    </article>`;
+}).join("");
+
+// Se a foto não existir, mostra a inicial do nome no lugar
+document.querySelectorAll(".avatar img").forEach(img => {
+  img.addEventListener("error", () => {
+    img.parentElement.textContent = EQUIPE[img.parentElement.dataset.i].nome.charAt(0);
+  });
+});
+
+// Cursos
+if (MOSTRAR_CURSOS && CURSOS.length) {
+  $("cursos").hidden = false;
+  $("nav-cursos").hidden = false;
+  $("lista-cursos").innerHTML = CURSOS.map(c => `
+    <article class="card">
+      <h3>${esc(c.titulo)}</h3>
+      <p>${esc(c.descricao)}</p>
+      ${c.preco ? `<div class="preco">${esc(c.preco)}</div>` : ""}
+      ${c.link
+        ? `<a class="btn" href="${esc(c.link)}" target="_blank" rel="noopener">Quero este curso</a>`
+        : `<span class="btn" aria-disabled="true">Em breve</span>`}
+    </article>`).join("");
+}
+
+// Sobre e contato
+$("sobre").textContent = SALAO.sobre;
+const dados = [];
+if (SALAO.endereco) dados.push(`<div><dt>Endereço</dt><dd>${esc(SALAO.endereco)}</dd></div>`);
+if (SALAO.horario)  dados.push(`<div><dt>Horário</dt><dd>${esc(SALAO.horario)}</dd></div>`);
+$("dados").innerHTML = dados.join("");
+
+const links = [];
+if (SALAO.endereco) {
+  const mapa = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(SALAO.endereco);
+  links.push(`<a class="btn" href="${mapa}" target="_blank" rel="noopener">Como chegar</a>`);
+}
+if (SALAO.instagram) links.push(`<a class="btn line" href="${esc(SALAO.instagram)}" target="_blank" rel="noopener">Instagram</a>`);
+$("links").innerHTML = links.join("");
+
+// Rodapé
+const ano = new Date().getFullYear();
+$("rodape").innerHTML = "<strong>" + esc(SALAO.nome) + "</strong><br>" + esc(SALAO.endereco || "") + "<br>© " + ano;
+
+// Dados para o Google entender que é um salão (ajuda a aparecer nas buscas)
+const ld = {
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": SALAO.nome,
+  "telephone": "+" + String(SALAO.whatsapp).replace(/\D/g, ""),
+  "address": SALAO.endereco,
+  "openingHours": SALAO.horario,
+  "url": location.href
+};
+if (SALAO.instagram) ld.sameAs = [SALAO.instagram];
+const tag = document.createElement("script");
+tag.type = "application/ld+json";
+tag.textContent = JSON.stringify(ld);
+document.head.appendChild(tag);
+</script>
+</body>
+</html>
